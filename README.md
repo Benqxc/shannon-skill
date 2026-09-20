@@ -5,6 +5,8 @@
 [![Skill](https://img.shields.io/badge/Claude_Code-skill-7B61FF?style=for-the-badge)](https://github.com/Benqxc/shannon-skill)
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue?style=for-the-badge)](LICENSE)
 [![Shannon](https://img.shields.io/badge/powered_by-Keygraph_Shannon-00d4aa?style=for-the-badge)](https://github.com/KeygraphHQ/shannon)
+[![Stars](https://img.shields.io/github/stars/Benqxc/shannon-skill?style=for-the-badge)](https://github.com/Benqxc/shannon-skill)
+[![Top language](https://img.shields.io/github/languages/top/Benqxc/shannon-skill?style=for-the-badge)](https://github.com/Benqxc/shannon-skill)
 
 **Autonomous AI pentester as a Claude Code skill.** Wraps [KeygraphHQ/Shannon](https://github.com/KeygraphHQ/shannon) — the white-box security testing framework that analyzes source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.
 
@@ -18,20 +20,42 @@
 
 ## Contents
 
-- [Install](#install)
-- [Quick start](#quick-start)
-- [Usage examples](#usage-examples)
-- [Prerequisites](#prerequisites)
-- [What Shannon tests](#what-shannon-tests)
-- [How it works](#how-it-works)
-- [Authentication configuration](#authentication-configuration)
-- [Testing local applications](#testing-local-applications)
-- [Skill structure](#skill-structure)
-- [Development](#development)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Installation](#installation)
+- [Usage](#usage-examples)
+- [Structure](#skill-structure)
 - [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
 - [Safety](#safety)
 - [Credits](#credits)
 - [License](#license)
+
+## Features
+
+| Capability | Details |
+|---|---|
+| 🤖 Autonomous pentesting | White-box analysis: source review, attack vectors, real exploits |
+| 🎯 50+ vulnerability types | 5 OWASP categories: Injection, XSS, SSRF, Broken Auth, Broken Access |
+| ✅ Proof-backed reports | No exploit, no report — every finding ships a reproducible PoC |
+| 🐳 Containerized | Nmap, Subfinder, WhatWeb, Schemathesis, Chromium/Playwright in Docker |
+| 🔐 Auth-aware | YAML configs for form/SSO login, TOTP, avoid/focus rules |
+| 🛡️ Safety gates | Authorization confirmation, production warnings, scope control |
+
+## Quick Start
+
+```bash
+npx skills add Benqxc/shannon-skill -g -y
+bash scripts/setup-shannon.sh
+```
+
+Then from Claude Code:
+
+```
+/shannon http://localhost:3000 myapp
+```
+
+## Installation
 
 ---
 
